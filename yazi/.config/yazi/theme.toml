@@ -1,0 +1,15 @@
+[flavor]
+use = "catppuccin-mocha"
+# For upcoming Yazi 0.4 (nightly version):
+dark = "catppuccin-mocha"
+#
+# [status]
+# separator_open  = ""
+# separator_close = ""
+#
+# [icon]
+# globs = []
+# dirs  = []
+# files = []
+# exts  = []
+# conds = []

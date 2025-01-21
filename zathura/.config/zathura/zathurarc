@@ -1,0 +1,18 @@
+set synctex true
+set statusbar-h-padding 0
+set font 'JetBrains Mono 11'
+# map u scroll half-up
+# map d scroll half-down
+# # map D toggle_page_mode
+# map r reload
+# map R rotate
+# map K zoom in
+# map J zoom out
+# map i recolor
+# map p print
+# map w zoom width
+# set selection-clipboard clipboard
+# map D set "first-page-column 1:1"
+# map <C-d> set "first-page-column 1:2"
+
+include themes/catppuccin-mocha

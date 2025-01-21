@@ -1,0 +1,20 @@
+[general]
+import = ["/usr/share/alacritty/themes/rose_pine.toml"]
+live_config_reload = true
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+padding = { x = 10 , y = 10}
+dynamic_padding = true
+
+[font]
+normal = {family = "JetBrains Mono", style = "Regular" }
+bold = {family = "JetBrains Mono", style = "Regular" }
+italic = {family = "JetBrains Mono", style = "Regular" }
+bold_italic = {family = "JetBrains Mono", style = "Regular" }
+
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l"] }
+osc52 = "CopyPaste"
