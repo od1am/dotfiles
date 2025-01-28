@@ -35,11 +35,13 @@ eval "$(zoxide init --cmd cd zsh)"
 ###############################################################################
 # 4) Aliases
 ###############################################################################
-# alias ls='lsd'
-# alias ll='ls -l'
-# alias la='ls -a'
-# alias lla='ls -la'
-# alias lt='ls --tree'
+alias ls='eza'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias cat='bat'
+alias find='fd'
 
 # Docker / container management
 alias dcu='docker compose up -d'
@@ -48,7 +50,8 @@ alias dcp='docker compose pull'
 alias dclean='docker system prune -a --volumes --force'
 alias lzd='lazydocker'
 alias lzg='lazygit'
-
+alias hx='helix'
+alias v='nvim'
 # Pacman / Paru / Arch stuff
 alias purge="sudo pacman -Rns \$(pacman -Qtdq) ; sudo fstrim -av"
 alias update="paru -Syu --nocombinedupgrade"
