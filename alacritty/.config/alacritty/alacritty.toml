@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/themes/rose_pine.toml"]
+import = ["~/.config/alacritty/themes/catppuccin_mocha.toml"]
 live_config_reload = true
 
 [env]
@@ -10,11 +10,8 @@ padding = { x = 10 , y = 10}
 dynamic_padding = true
 
 [font]
-size = 16.00
+size = 13.00
 normal = {family = "TX-02", style = "Regular" }
-bold = {family = "TX-02", style = "Bold" }
-italic = {family = "TX-02", style = "Italic" }
-bold_italic = {family = "TX-02", style = "Bold Italic" }
 
 [terminal]
 osc52 = "CopyPaste"

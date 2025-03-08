@@ -1,12 +1,12 @@
 local opt = vim.opt
 
 opt.number = true
-opt.relativenumber = true
+-- opt.relativenumber = true
 opt.mouse = 'a'
 opt.showmode = true
 
 vim.schedule(function()
-    opt.clipboard = 'unnamedplus'
+  opt.clipboard = 'unnamedplus'
 end)
 
 opt.cmdheight = 0
@@ -16,7 +16,7 @@ opt.breakindent = true
 opt.wrap = false
 
 -- Save undo history
-opt.undofile = truevim
+opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 opt.ignorecase = true
@@ -42,34 +42,34 @@ opt.splitbelow = true
 opt.list = true
 -- ui
 opt.cursorline = true -- highlight the current line
-opt.laststatus = 2    -- only the last window will always have a status line
+opt.laststatus = 2 -- only the last window will always have a status line
 opt.lazyredraw = true -- don"t update the display while executing macros
 opt.list = true
 opt.listchars = {
-    tab = '┊ ',
-    trail = '·',
-    extends = '»',
-    precedes = '«',
-    nbsp = '×',
+  tab = '┊ ',
+  trail = '·',
+  extends = '»',
+  precedes = '«',
+  nbsp = '×',
 }
 
 -- Preview substitutions live, as you type!
 opt.inccommand = 'split'
 
 -- Show which line your cursor is on
--- opt.cursorline = true
+opt.cursorline = true
 
-opt.scrolloff = 3     -- minimal number of screen lines to keep above and below the cursor
+opt.scrolloff = 16 -- minimal number of screen lines to keep above and below the cursor
 opt.sidescrolloff = 3 -- minimal number of screen columns to keep to the left and right (horizontal) of the cursor if wrap is `false`
 
 -- backups
-opt.backup = false      -- create a backup file
-opt.swapfile = false    -- creates a swapfile
+opt.backup = false -- create a backup file
+opt.swapfile = false -- creates a swapfile
 opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
 -- perfomance
 -- remember N lines in history
-opt.history = 100    -- keep 100 lines of history
+opt.history = 100 -- keep 100 lines of history
 opt.redrawtime = 1500
 opt.timeoutlen = 250 -- time to wait for a mapped sequence to complete (in milliseconds)
 opt.ttimeoutlen = 10

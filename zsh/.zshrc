@@ -1,17 +1,11 @@
-###############################################################################
-# 1) History and Keybindings
-###############################################################################
 HISTFILE=~/.history
 HISTSIZE=100000
 SAVEHIST=100000
 
-unsetopt beep       # Disable beep
-unsetopt nomatch    # Disable error if no match in filename generation
-bindkey -e          # Use Emacs keybindings
+unsetopt beep
+unsetopt nomatch
+bindkey -e
 
-###############################################################################
-# 2) Environment Variables
-###############################################################################
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -24,17 +18,15 @@ export PATH="/bin:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
-###############################################################################
-# 3) External Tools Initialization
-###############################################################################
 eval "$(fzf --zsh)"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-###############################################################################
-# 4) Aliases
-###############################################################################
+# export PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+# export PS1="%{%F{243}%}%n%{%F{245}%}@%{%F{249}%}%m %{%F{254}%}%1~ %{%f%}$ "
+PROMPT="%B%F{blue}%~%f%b %B%F{green}>%f%b "
 alias ls='eza'
 alias ll='ls -l'
 alias la='ls -a'
@@ -43,7 +35,6 @@ alias lt='ls --tree'
 alias cat='bat'
 alias find='fd'
 
-# Docker / container management
 alias dcu='docker compose up -d'
 alias dcd='docker compose down'
 alias dcp='docker compose pull'
@@ -52,24 +43,17 @@ alias lzd='lazydocker'
 alias lzg='lazygit'
 alias hx='helix'
 alias v='nvim'
-# Pacman / Paru / Arch stuff
 alias purge="sudo pacman -Rns \$(pacman -Qtdq) ; sudo fstrim -av"
 alias update="paru -Syu --nocombinedupgrade"
 alias plist="paru -Slq | fzf -m --preview 'paru -Si {1}' | xargs -ro paru -S"
 alias plrem="paru -Qeq | fzf -m --preview 'paru -Qi {1}' | xargs -ro paru -Rs"
 alias mirrors="sudo reflector --verbose --latest 5 --country 'United States' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-# Misc
 alias du="dust -r -n 999999999"
 alias mp3-dl='yt-dlp --ignore-config --extract-audio \
     --audio-format "mp3" --audio-quality 0 --embed-thumbnail --embed-metadata \
     --output "$HOME/Downloads/%(title)s.%(ext)s"'
 alias mpa="mpv --no-video"
-
-###############################################################################
-# 5) Functions
-###############################################################################
 
 # yazi with auto-cd to last visited directory
 function y() {
@@ -167,8 +151,5 @@ function zipc() {
   echo "Archive ${zipFileName} created."
 }
 
-###############################################################################
-# 6) Completion
-###############################################################################
 autoload -Uz compinit
 compinit

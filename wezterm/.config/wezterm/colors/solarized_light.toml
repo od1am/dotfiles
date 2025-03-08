@@ -1,0 +1,40 @@
+[colors]
+foreground = "#657b83"  # Base00
+background = "#fdf6e3"  # Base3
+cursor_bg = "#657b83"   # Base00
+cursor_border = "#657b83" # Base00
+cursor_fg = "#fdf6e3"   # Base3
+selection_bg = "#eee8d5" # Base2
+selection_fg = "#586e75" # Base01
+
+ansi = ["#073642", "#dc322f", "#859900", "#b58900", "#268bd2", "#d33682", "#2aa198", "#eee8d5"]
+brights = ["#002b36", "#cb4b16", "#586e75", "#657b83", "#839496", "#6c71c4", "#93a1a1", "#fdf6e3"]
+
+[colors.tab_bar]
+background = "#eee8d5" # Base2
+
+[colors.tab_bar.active_tab]
+bg_color = "#fdf6e3"   # Base3
+fg_color = "#586e75"   # Base01
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#eee8d5"   # Base2
+fg_color = "#93a1a1"   # Base1
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#fdf6e3"   # Base3
+fg_color = "#586e75"   # Base01
+italic = true
+
+[colors.tab_bar.new_tab]
+bg_color = "#eee8d5"   # Base2
+fg_color = "#93a1a1"   # Base1
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#fdf6e3"   # Base3
+fg_color = "#586e75"   # Base01
+italic = true
+
+[metadata]
+name = "Solarized Light"

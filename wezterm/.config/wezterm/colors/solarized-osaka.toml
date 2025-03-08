@@ -1,0 +1,16 @@
+[colors]
+foreground = "#839495"
+background = "#00141a"
+cursor_bg = "#839495"
+cursor_border = "#839495"
+cursor_fg = "#00141a"
+selection_bg = "#00354b"
+selection_fg = "#839495"
+
+ansi = ["#00141a", "#dc312e", "#859900", "#b38600", "#278bd3", "#d33682", "#2aa298", "#ede7d4"]
+brights = ["#002d38", "#f65351", "#b7fa00", "#ffbf00", "#47adf5", "#f254a1", "#2beede", "#fdf6e2"]
+
+[metadata]
+aliases = []
+author = "craftzdog"
+name = "Solarized Osaka"
