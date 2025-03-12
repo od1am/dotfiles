@@ -1,7 +1,8 @@
 return {
-  'nyoom-engineering/oxocarbon.nvim',
+  'catppuccin/nvim',
+  name = 'catppuccin',
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme 'oxocarbon'
+    vim.cmd.colorscheme 'catppuccin-frappe'
   end,
 }

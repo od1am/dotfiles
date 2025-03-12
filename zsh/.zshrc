@@ -11,7 +11,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-export EDITOR="$(which nvim)"
+export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
 export PATH="/bin:$PATH"
@@ -20,20 +20,27 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/zor/.lmstudio/bin"
+
+# Golang environment variables
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+
+# Update PATH to include GOPATH and GOROOT binaries
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
 eval "$(fzf --zsh)"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-# export PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
-# export PS1="%{%F{243}%}%n%{%F{245}%}@%{%F{249}%}%m %{%F{254}%}%1~ %{%f%}$ "
-PROMPT="%B%F{blue}%~%f%b %B%F{green}>%f%b "
-alias ls='eza'
+alias ls='lsd'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias cat='bat'
 alias find='fd'
+alias grep='rg'
 
 alias dcu='docker compose up -d'
 alias dcd='docker compose down'

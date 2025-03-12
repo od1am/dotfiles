@@ -1,8 +1,10 @@
-theme = "Oxocarbon"
+theme = "catppuccin-frappe"
 window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
 font-size = 13.00
-# font-family = "TX-02"
-# font-feature = -dlig, -liga, -calt
+font-family = "JetBrains Mono"
+font-feature = -dlig, -liga, -calt
 gtk-single-instance = true
 confirm-close-surface = false
 window-vsync = false

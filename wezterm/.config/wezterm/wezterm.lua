@@ -5,16 +5,16 @@ local config = wezterm.config_builder()
 config.font = wezterm.font_with_fallback({
 	{
 		family = "TX-02",
-		weight = "Medium",
-		harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+		-- weight = "Medium",
+		-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 	},
 	{
 		family = "Symbols Nerd Font Mono",
 	},
 })
--- config.max_fps = 144
--- config.animation_fps = 144
-config.font_size = 16.00
+config.max_fps = 240
+config.animation_fps = 240
+config.font_size = 13.00
 -- config.tab_and_split_indices_are_zero_based = false
 -- config.front_end = "WebGpu"
 -- config.webgpu_power_preference = "HighPerformance"

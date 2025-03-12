@@ -31,14 +31,13 @@ Before using this repository, ensure you have the following installed:
    ```
 2. **Use Stow to symlink configurations**:
 To symlink the configuration for a specific program (e.g., zsh), run:
-
-```bash
-    stow zsh
-```
+    ```bash
+        stow zsh
+    ```
 This will create symlinks in your home directory for all files inside the zsh/ directory.
 
 3. **Symlink multiple programs**:
 To symlink configurations for multiple programs at once, run:
-```bash
-    stow zsh git vim
-```
+    ```bash
+        stow zsh git vim
+    ```
