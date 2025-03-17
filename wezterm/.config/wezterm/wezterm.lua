@@ -2,19 +2,35 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local config = wezterm.config_builder()
 
-config.font = wezterm.font_with_fallback({
-	{
-		family = "TX-02",
-		-- weight = "Medium",
-		-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
-	},
-	{
-		family = "Symbols Nerd Font Mono",
-	},
-})
-config.max_fps = 240
-config.animation_fps = 240
-config.font_size = 13.00
+-- function get_appearance()
+-- 	if wezterm.gui then
+-- 		return wezterm.gui.get_appearance()
+-- 	end
+-- 	return "Dark"
+-- end
+--
+-- function scheme_for_appearance(appearance)
+-- 	if appearance:find("Dark") then
+-- 		return "Catppuccin Mocha"
+-- 	else
+-- 		return "Catppuccin Latte"
+-- 	end
+-- end
+
+config.font = wezterm.font("TX-02")
+-- config.font = wezterm.font_with_fallback({
+-- {
+-- 	family = "Iosevka",
+-- 	-- weight = "Medium",
+-- 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+-- },
+-- {
+-- 	family = "Symbols Nerd Font Mono",
+-- },
+-- })
+-- config.max_fps = 240
+-- config.animation_fps = 240
+config.font_size = 16.00
 -- config.tab_and_split_indices_are_zero_based = false
 -- config.front_end = "WebGpu"
 -- config.webgpu_power_preference = "HighPerformance"
@@ -40,7 +56,8 @@ config.font_size = 13.00
 -- 		action = wezterm.action.OpenLinkAtMouseCursor,
 -- 	},
 -- }
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = scheme_for_appearance(get_appearance())
+config.color_scheme = "Catppuccin Frappe"
 -- config.window_close_confirmation = "NeverPrompt"
 -- config.enable_tab_bar = false
 config.use_fancy_tab_bar = false

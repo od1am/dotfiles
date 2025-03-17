@@ -59,8 +59,8 @@ opt.inccommand = 'split'
 -- Show which line your cursor is on
 opt.cursorline = true
 
-opt.scrolloff = 16 -- minimal number of screen lines to keep above and below the cursor
-opt.sidescrolloff = 3 -- minimal number of screen columns to keep to the left and right (horizontal) of the cursor if wrap is `false`
+-- opt.scrolloff = 16 -- minimal number of screen lines to keep above and below the cursor
+-- opt.sidescrolloff = 3 -- minimal number of screen columns to keep to the left and right (horizontal) of the cursor if wrap is `false`
 
 -- backups
 opt.backup = false -- create a backup file

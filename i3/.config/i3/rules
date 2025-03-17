@@ -1,9 +1,5 @@
 # Disable all borders
-for_window [class=".*"] border pixel 0
-
-# always open some programs on specified workspace
-assign [class="firefox"]  $ws1
-assign [class="alacritty"]  $ws3
+# for_window [class=".*"] border pixel 0
 
 # App rules
 for_window [class="mpv"] floating enable
@@ -18,6 +14,6 @@ for_window [window_role="task_dialog"] floating enable
 
 no_focus [window_role="pop-up"]
 no_focus [window_type="notification"]
-# focus_on_window_activation none
-# new_window pixel
-# focus_follows_mouse no
+focus_on_window_activation none
+new_window pixel
+focus_follows_mouse no
