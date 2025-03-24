@@ -6,7 +6,7 @@ window-padding-x = 10
 window-padding-y = 10
 
 font-size = 13
-# font-family = "TX-02"
+font-family = "Iosevka Term"
 font-feature = -dlig, -liga, -calt
 
 gtk-single-instance = true
