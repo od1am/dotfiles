@@ -1,10 +1,14 @@
-theme = "catppuccin-mocha"
+theme = GruvboxDark
+window-theme = dark
+
 window-padding-balance = true
 window-padding-x = 10
 window-padding-y = 10
-font-size = 16.00
-font-family = "TX-02"
+
+font-size = 13
+# font-family = "TX-02"
 font-feature = -dlig, -liga, -calt
+
 gtk-single-instance = true
 confirm-close-surface = false
 window-vsync = false

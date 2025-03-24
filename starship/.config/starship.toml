@@ -8,7 +8,7 @@ error_symbol = "[x](bold red)"
 vimcmd_symbol = "[<](bold green)"
 
 [time]
-disabled = false
+disabled = true
 style = "bold bright-black"
 format = "[$time]($style)"
 
@@ -16,6 +16,7 @@ format = "[$time]($style)"
 disabled = true
 
 [directory]
+style = "bold blue"
 truncate_to_repo = false
 
 [zig]
