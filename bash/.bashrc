@@ -1,10 +1,40 @@
-HISTFILE=~/.history
-HISTSIZE=100000
-SAVEHIST=100000
+# ~/.bashrc
 
-unsetopt beep
-unsetopt nomatch
-bindkey -e
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# History settings
+HISTSIZE=10000
+HISTFILESIZE=20000
+HISTCONTROL=ignoreboth
+shopt -s histappend
+
+# Check the window size after each command
+shopt -s checkwinsize
+
+# Make less more friendly for non-text input files
+[[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Set a fancy prompt
+if [[ -n "$TERM" && "$TERM" != "dumb" ]]; then
+    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='\u@\h:\w\$ '
+fi
+
+# Enable color support of ls
+if [[ -x /usr/bin/dircolors ]]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Some useful aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -158,5 +188,5 @@ function y() {
 #   echo "Archive ${zipFileName} created."
 # }
 
-autoload -Uz compinit
-compinit
+# Source local bashrc if it exists
+[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local 
