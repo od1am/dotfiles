@@ -1,13 +1,14 @@
 theme = catppuccin-mocha
 window-theme = dark
+term = xterm-256color
 
 window-padding-balance = true
 window-padding-x = 10
 window-padding-y = 10
 window-decoration = false
 
-font-size = 13
-font-family = "JetBrains Mono"
+font-size = 16.00
+font-family = "TX-02"
 font-feature = -dlig, -liga, -calt
 
 gtk-single-instance = true

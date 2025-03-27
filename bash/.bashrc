@@ -59,9 +59,8 @@ export GOPATH=$HOME/go
 
 # Update PATH to include GOPATH and GOROOT binaries
 export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
-# eval "$(fzf --zsh)"
-# eval "$(starship init zsh)"
-# eval "$(zoxide init zsh)"
+eval "$(fzf --bash)"
+eval "$(zoxide init bash)"
 
 # alias ls='lsd'
 # alias ll='ls -l'
