@@ -1,0 +1,11 @@
+theme = "tokyonight_moon"
+# font-family = "JetBrains Mono"
+# font-size = 13
+# font-feature = -calt, -liga, -dlig
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
+window-vsync = false
+window-decoration = none
+confirm-close-surface = false
+gtk-single-instance = true

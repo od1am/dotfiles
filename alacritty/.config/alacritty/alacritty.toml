@@ -1,0 +1,17 @@
+[general]
+import = ["~/.config/alacritty/themes/tokyo_night.toml"]
+live_config_reload = true
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+padding = { x = 10 , y = 10}
+dynamic_padding = true
+
+[font]
+size = 13.00
+normal = {family = "JetBrains Mono", style = "Regular" }
+
+[terminal]
+osc52 = "CopyPaste"

@@ -1,0 +1,32 @@
+#  _______                    ____
+# (_)___ /    ___ ___  _ __  / _(_) __ _
+# | | |_ \   / __/ _ \| '_ \| |_| |/ _` |
+# | |___) | | (_| (_) | | | |  _| | (_| |
+# |_|____/   \___\___/|_| |_|_| |_|\__, |
+
+include keybinds
+include autostart
+include rules
+include themes/catppuccin-mocha
+
+# Font
+font pango:monospace 10
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+
+# Inner gaps for all windows: space between two adjacent windows (or split containers).
+gaps inner 0px
+
+# Outer gaps for all windows: space along the screen edges.
+gaps outer 0px
+
