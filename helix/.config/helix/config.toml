@@ -1,6 +1,10 @@
+theme = "tokyonight_moon"
+
 ## Vim Keybinds
 [keys.normal]
+
 # Quick iteration on config changes
+
 C-o = ":config-open"
 C-r = ":config-reload"
 

@@ -4,63 +4,59 @@
 [[ $- != *i* ]] && return
 
 # History settings
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=-1
+HISTFILESIZE=-1
 HISTCONTROL=ignoreboth
 shopt -s histappend
-
-# Check the window size after each command
 shopt -s checkwinsize
 
-# Make less more friendly for non-text input files
-[[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# Set a fancy prompt
-if [[ -n "$TERM" && "$TERM" != "dumb" ]]; then
-    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='\u@\h:\w\$ '
-fi
-
-# Enable color support of ls
-if [[ -x /usr/bin/dircolors ]]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# Some useful aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
+# export XDG_CACHE_HOME="$HOME/.cache"
+# export XDG_CONFIG_HOME="$HOME/.config"
+# export XDG_DATA_HOME="$HOME/.local/share"
+# export XDG_STATE_HOME="$HOME/.local/state"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
-export PATH="/bin:$PATH"
-export PATH="/usr/bin:$PATH"
-export PATH="$PATH:$HOME/.bin"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$HOME/.emacs.d/bin:$PATH"
+# export PATH="/bin:$PATH"
+# export PATH="/usr/bin:$PATH"
+# export PATH="$PATH:$HOME/.bin"
+# export PATH="$PATH:$HOME/.local/bin"
+#
+# # Golang environment variables
+# export GOROOT=/usr/local/go
+# export GOPATH=$HOME/go
+#
+# # Update PATH to include GOPATH and GOROOT binaries
+# export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/zor/.lmstudio/bin"
+# Make less more friendly for non-text input files
+# [[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# Golang environment variables
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
+# Set a fancy prompt
+# if [[ -n "$TERM" && "$TERM" != "dumb" ]]; then
+#   PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#   PS1='\u@\h:\w\$ '
+# fi
 
-# Update PATH to include GOPATH and GOROOT binaries
-export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
-eval "$(fzf --bash)"
-eval "$(zoxide init bash)"
+# Enable color support of ls
+# if [[ -x /usr/bin/dircolors ]]; then
+#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#     alias ls='ls --color=auto'
+#     alias grep='grep --color=auto'
+#     alias fgrep='fgrep --color=auto'
+#     alias egrep='egrep --color=auto'
+# fi
+
+# Some useful aliases
+# alias ll='ls -alF'
+# alias la='ls -A'
+# alias l='ls -CF'
+
+# eval "$(fzf --bash)"
+# eval "$(zoxide init bash)"
+eval "$(starship init bash)"
 
 # alias ls='lsd'
 # alias ll='ls -l'
@@ -92,20 +88,20 @@ eval "$(zoxide init bash)"
 # alias mpa="mpv --no-video"
 
 # yazi with auto-cd to last visited directory
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
-}
+# function y() {
+#   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+#   yazi "$@" --cwd-file="$tmp"
+#   if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+#     builtin cd -- "$cwd"
+#   fi
+#   rm -f -- "$tmp"
+# }
 #
 # # Quick weather
 # function weather() {
 #   curl "https://wttr.in?format=3"
 # }
-#
+
 # # PHP built-in webserver (with local IP detection)
 # function phpserver() {
 #   local port="${1:-4000}"
@@ -186,6 +182,3 @@ function y() {
 #   zip -r "$zipFileName" "$@"
 #   echo "Archive ${zipFileName} created."
 # }
-
-# Source local bashrc if it exists
-[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local 

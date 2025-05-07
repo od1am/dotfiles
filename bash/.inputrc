@@ -10,10 +10,10 @@ set show-all-if-ambiguous on
 set completion-ignore-case on
 
 # Enable bracketed paste mode
-set enable-bracketed-paste on
+# set enable-bracketed-paste on
 
 # Use visible bell instead of beeping
-set bell-style visible
+# set bell-style visible
 
 # Show mark indicators in the prompt
 # set show-mode-in-prompt on 

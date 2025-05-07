@@ -1,11 +1,18 @@
- if v:version < 802
-    packadd! dracula
-endif
+set encoding=utf-8
+scriptencoding utf-8
+filetype plugin indent on
 syntax enable
-colorscheme dracula
-set tabstop=2
+set termguicolors
+set background=dark
+colorscheme catppuccin_mocha
+set nocompatible
+set number
+set clipboard=unnamed
+set clipboard=unnamedplus
+set noswapfile
+set matchpairs+=<:>,「:」
+set ignorecase smartcase
+set tabstop=4
 set shiftwidth=0
 set expandtab
-
-
-  
+let g:netrw_banner=0

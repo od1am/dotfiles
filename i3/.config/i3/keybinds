@@ -1,6 +1,6 @@
 # Default Modifier
 set $mod Mod4
-set $term kitty
+set $term wezterm
 floating_modifier $mod
 
 # Start a terminal
