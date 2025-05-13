@@ -9,6 +9,8 @@ set show-all-if-ambiguous on
 # Case-insensitive completion
 set completion-ignore-case on
 
+# "\C-i": menu-complete
+
 # Enable bracketed paste mode
 # set enable-bracketed-paste on
 

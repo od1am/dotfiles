@@ -1,11 +1,19 @@
 return {
-  'zbirenbaum/copilot.lua',
-  cmd = 'Copilot',
-  event = 'InsertEnter',
-  config = function()
-    require('copilot').setup {
-      suggestion = { enabled = false },
-      panel = { enabled = false },
-    }
-  end,
+	{
+		"giuxtaposition/blink-cmp-copilot",
+		after = { "copilot.lua" },
+	},
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		opts = {
+			panel = { enabled = false },
+			-- Disable to use in cmp
+			suggestion = { enabled = false },
+		},
+		config = function(_, opts)
+			require("copilot").setup(opts)
+		end,
+	},
 }

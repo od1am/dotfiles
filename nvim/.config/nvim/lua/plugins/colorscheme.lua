@@ -1,15 +1,18 @@
 return {
-  'ellisonleao/gruvbox.nvim',
-  priority = 1000, -- Make sure to load this before all the other start plugins.
-  config = function()
-    ---@diagnostic disable-next-line: missing-fields
-    require('gruvbox').setup {
-      transparent_mode = true,
-    }
-    vim.cmd.colorscheme 'gruvbox'
-    vim.cmd [[
-        highlight Normal guibg=none
-        highlight Normal ctermbg=none
-      ]]
-  end,
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			-- require("tokyonight").setup({
+			-- 	transparent = true,
+			-- 	styles = {
+			-- 		sidebars = "transparent",
+			-- 		floats = "transparent",
+			-- 	},
+			-- })
+			vim.cmd.colorscheme("tokyonight")
+		end,
+	},
 }

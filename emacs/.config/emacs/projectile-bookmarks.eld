@@ -1,1 +1,0 @@
-("~/projects/piano/" "~/projects/todo/" "~/dotfiles/")
