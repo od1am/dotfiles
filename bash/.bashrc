@@ -9,16 +9,15 @@ HISTFILESIZE=-1
 HISTCONTROL=ignoreboth
 shopt -s histappend
 shopt -s checkwinsize
-shopt -s nocaseglob;
-shopt -s cdspell;
+shopt -s nocaseglob
+shopt -s cdspell
 
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
- 
-# PS1='\[\e[94;1m\]\w\[\e[0m\] \[\e[92;1m\]>\[\e[0m\] '
+PS1='\[\e[94;1m\]\w\[\e[0m\] \[\e[92;1m\]>\[\e[0m\] '
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
@@ -41,7 +40,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 eval "$(fzf --bash)"
-eval "$(starship init bash)"
 
 alias ll='ls -l'
 alias la='ls -a'
@@ -100,12 +98,12 @@ function targz() {
 
   local size
   size=$(
-    stat -f"%z" "${tmpFile}" 2>/dev/null || \
-    stat -c"%s" "${tmpFile}" 2>/dev/null
+    stat -f"%z" "${tmpFile}" 2>/dev/null ||
+      stat -c"%s" "${tmpFile}" 2>/dev/null
   )
 
   local cmd=""
-  if (( size < 52428800 )) && hash zopfli 2>/dev/null; then
+  if ((size < 52428800)) && hash zopfli 2>/dev/null; then
     cmd="zopfli"
   else
     if hash pigz 2>/dev/null; then
@@ -121,8 +119,8 @@ function targz() {
 
   local zippedSize
   zippedSize=$(
-    stat -f"%z" "${tmpFile}.gz" 2>/dev/null || \
-    stat -c"%s" "${tmpFile}.gz" 2>/dev/null
+    stat -f"%z" "${tmpFile}.gz" 2>/dev/null ||
+      stat -c"%s" "${tmpFile}.gz" 2>/dev/null
   )
 
   echo "${tmpFile}.gz ($((zippedSize / 1000)) kB) created successfully."
@@ -146,7 +144,6 @@ function gz() {
   printf "orig: %d bytes\n" "$origsize"
   printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio"
 }
-
 
 function zipc() {
   # Usage: zipc <file_or_directory> [file_or_directory...]
